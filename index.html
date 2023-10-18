@@ -113,6 +113,9 @@
                 document.getElementById("error").innerText = 'Token Error';
                 return;
             }
+            else {
+                tg.MainButton.show()
+            }
             let data = {
                 token: token,
             }

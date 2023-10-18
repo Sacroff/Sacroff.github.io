@@ -45,7 +45,7 @@
 
         button {
             border: 0;
-            border-radius: 5px;
+            border-radius: 25px;
             margin-top: 50px;
             height: 60px;
             width: 200px;
@@ -92,7 +92,7 @@
         <h1>Заполните форму</h1>
         <input type="text" placeholder="Game Token" id="token">
         <div id="error"></div>
-        <button id="order">Зарегестрироваться</button>
+        <button id="order">Check</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
@@ -109,8 +109,8 @@
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
             let token  = document.getElementById("token").value;
-            if(name.length < 5) {
-                document.getElementById("error").innerText = 'Ошибка в имени';
+            if(token.length < 5) {
+                document.getElementById("error").innerText = 'Token Error';
                 return;
             }
             let data = {

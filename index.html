@@ -111,10 +111,11 @@
             let token  = document.getElementById("token").value;
             if(token.length < 5) {
                 document.getElementById("error").innerText = 'Token Error';
+                tg.MainButton.enable()
                 return;
             }
             else {
-                tg.MainButton.show()
+                tg.MainButton.enable()
             }
             let data = {
                 token: token,
